@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Color Picker</title>
+    <title>A Color Picker</title>
     <!-- libs -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="color-picker.min.js"></script>
@@ -53,7 +54,7 @@
     <!-- Custom element code -->
     <script>
         var isDisabled = false;
-
+//custom function for updating the disabled
         function updateDisabled(disabled) {
             isDisabled = disabled;
             if (disabled) {
@@ -63,7 +64,7 @@
                 $('.disabled_overlay').hide();
             }
         }
-
+           //custom function for setting up the Color Picker
         function setupColorPicker(hexColorValue) {
             const container = document.querySelector('#color-picker');
             const picker = new CP(container, false, container);
@@ -84,6 +85,7 @@
             picker.enter();
         }
 
+           //custom function for updating the size
         function updateSize() {
             // Update the custom element height in the Kentico UI.
             const height = Math.ceil($("html").height());
